@@ -5,15 +5,15 @@ void main() {
     print('hello ${i + 1}');
   }
 
-  int num = 1;
-  String a = 'texto1';
-  String b = "texto2";
-  bool value = true;
-  var c =15;
-  var d = 2.1;
-  var e = "oi";
-  dynamic f = a + b;
-  dynamic g = a + "$c";
+  int a = 1;
+  String b = 'texto1';
+  String c = "texto2";
+  bool d = true;
+  var e = 15;
+  var f = 2.1;
+  var g = "oi";
+  dynamic h = b + c;
+  dynamic i = b + "$e";
 
-  print(g);
+  print(a);
 }

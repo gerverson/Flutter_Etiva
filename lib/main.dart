@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_etiva/Contador.dart';
 import 'package:flutter_etiva/Moeda.dart';
 import 'package:flutter_etiva/Sorte.dart';
+import 'package:flutter_etiva/lista.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +18,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+
 class MyStatefulWidget extends StatefulWidget {
   @override
   _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
@@ -26,6 +29,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     Color gradientStart = Colors.blueAccent[700];
     Color gradientEnd = Colors.red[500];
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Etiva'),
@@ -88,6 +92,18 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Sorte()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("Lista",
+                  style: TextStyle(color: Colors.black)),
+              onPressed: () {
+                List<String> items;
+                items = List<String>.generate(100, (i) => "Item $i");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyList(items: items)),
                 );
               },
             ),

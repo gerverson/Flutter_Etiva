@@ -21,7 +21,9 @@ class _SorteState extends State<Sorte> {
     int myCred = _credit ?? -1;
     if (myCred > 0) {
       var randomizer = new Random();
-      var num = randomizer.nextInt(100);
+      var max = 100;
+      var min = 1;
+      var num = min + randomizer.nextInt(max - min);
       setState(() {
         _random = "$num";
       });

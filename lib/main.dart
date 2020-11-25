@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_etiva/Contador.dart';
 import 'package:flutter_etiva/Moeda.dart';
 import 'package:flutter_etiva/Sorte.dart';
+import 'package:flutter_etiva/imc.dart';
 import 'package:flutter_etiva/lista.dart';
+import 'package:flutter_etiva/pessoas.dart';
+import 'package:flutter_etiva/tarefas.dart';
+import 'package:flutter_etiva/webview.dart';
 
 void main() => runApp(MyApp());
 
@@ -96,7 +100,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               },
             ),
             RaisedButton(
-              child: Text("Lista",
+              child: Text("Lista Automatica",
                   style: TextStyle(color: Colors.black)),
               onPressed: () {
                 List<String> items;
@@ -104,6 +108,46 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MyList(items: items)),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("IMC",
+                  style: TextStyle(color: Colors.black)),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => imc()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("Contador Pessoas",
+                  style: TextStyle(color: Colors.black)),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => pessoas()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("Lista de tarefas",
+                  style: TextStyle(color: Colors.black)),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => tarefas()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("WebView",
+                  style: TextStyle(color: Colors.black)),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HelpScreen()),
                 );
               },
             ),
